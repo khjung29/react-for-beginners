@@ -13,12 +13,23 @@ function Detail() {
         // setLoading(false);
       }
 
-
     useEffect(() => {
         getDetails();
-    });
+    },[]);
 
-    return <h1>Detail</h1>
+    return (
+      <div>
+        <h1>{Details.title}</h1>
+        <div>
+          <img src={Details.medium_cover_image} alt={Details.title}/>
+          <p>{Details.summary}</p>
+          <ul>
+            {Details.genres.map((g) => (<li key={g}>{g}</li>))}
+          </ul>
+        </div>
+      </div>
+    );
+
 }
 
 export default Detail;
