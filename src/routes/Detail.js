@@ -24,7 +24,7 @@ function Detail() {
           <img src={Details.medium_cover_image} alt={Details.title}/>
           <p>{Details.summary}</p>
           <ul>
-            {Details.genres.map((g) => (<li key={g}>{g}</li>))}
+            {Details.genres && Details.genres.map((g) => (<li key={g}>{g}</li>))}
           </ul>
         </div>
       </div>
